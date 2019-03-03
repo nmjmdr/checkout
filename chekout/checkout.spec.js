@@ -8,7 +8,7 @@ const bulkDiscount = require('../promos/rules/bulkDiscount')
 const buyXGetYDiscount = require('../promos/rules/buyXGetYAtDiscount');
 const carts = require('../carts')
 
-describe("promos", ()=> {
+describe("checkout", ()=> {
     let sandbox
    
 
@@ -19,7 +19,7 @@ describe("promos", ()=> {
       sandbox.restore()
     })
     
-    describe("checkout", () => {
+    describe("scenarios", () => {
         const promos = promotions.promos()
         const promoCode1 = 'buy3at2'
         promos.add(promoCode1,buyXAtYPrice.rule(promoCode1,'atv',3,2))
